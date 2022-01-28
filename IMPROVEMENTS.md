@@ -20,6 +20,7 @@
             child: ...,
         );
         ```
+        - Alguns dos Widgets estão responsivos comparados aos seus Widgets pais com a utilização do `LayoutBuilder`, mas isso não garante a responsividade dos próprios `widgets pais`.
 
 - [ ] Customização
     - Cores dos Widgets não estão padronizadas e também não dão a possibilidade de uma fácil alteração por parâmetros.
