@@ -11,7 +11,7 @@ class StairBotWidget extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: size.height,
       width: size.width,
       child: LayoutBuilder(builder: (context, constraints) {

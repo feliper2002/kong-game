@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import '../../constants/colors.dart';
 
 class StairMidWidget extends StatelessWidget {
@@ -9,7 +8,7 @@ class StairMidWidget extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: size.height,
       width: size.width,
       child: LayoutBuilder(builder: (context, constraints) {
