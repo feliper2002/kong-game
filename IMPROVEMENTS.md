@@ -1,10 +1,10 @@
-# Pontos de melhoria
+# Pontos de melhoria - Kong
 
 ## Widgets
 
 - [ ] Responsividade
     - Valores estão fixos, Widgets podem quebrar em telas de diferentes tamanhos
-        - Carlcular proporção dos Widgets em comparação à tela em análise para torná-los adaptativos
+        - Calcular proporção dos Widgets em comparação à tela em análise para torná-los adaptativos
         ```dart
         final size = MediaQuery.of(context).size; // pegar dimensões da tela
 
@@ -12,11 +12,19 @@
         /// [dx] = [(dimensaoComponenteX / telaX)] * (size.width) // Dimensões de largura (x)
         ///
         /// [dy] = [(dimensaoComponenteY / telaY)] * (size.height) // Dimensões de altura (y)
-        ///
+
+        /// Exemplo
+        return SizedBox(
+            height: size.height * .4,
+            width: size.width: * .078,
+            child: ...,
+        );
         ```
 
 - [ ] Customização
-    - Cores dos Widgets não estão padronizadas e também não dão a possibilidade de uma fácil alteração por parâmetros
+    - Cores dos Widgets não estão padronizadas e também não dão a possibilidade de uma fácil alteração por parâmetros.
+    
+    É importante permitir essa customização para maior flexibilidade ao atender as demandas do cliente em casos de mudança de decisões.
 
     Exemplo do que pode ser feito:
     ```dart
@@ -34,5 +42,16 @@
             this.darkColor = AppColors.darkPink,
         }) : super(key: key);
     }
+    ```
+    Isso permite que não precisemos, em casos de decisões do cliente, alterar a raiz do Widget, um por um. Podemos alterar os valores passando os novos por parâmetro.
+
+    ```dart
+    ...
+    LatticeWidget(
+        color: AppColors.blue,
+        lightColor: AppColors.lightBlue,
+        darkColor: AppColors.darkBlue,
+    ),
+    ...
     ```
 
