@@ -3,6 +3,8 @@
 ## Widgets
 
 - [ ] Responsividade
+    
+    (É necessário garantir a adaptação dos Widgets em diferentes tamanhos de telas.)
     - Valores estão fixos, Widgets podem quebrar em telas de diferentes tamanhos
         - Calcular proporção dos Widgets em comparação à tela em análise para torná-los adaptativos
         ```dart
@@ -21,6 +23,9 @@
         );
         ```
         - Alguns dos Widgets estão responsivos comparados aos seus Widgets pais com a utilização do `LayoutBuilder`, mas isso não garante a responsividade dos próprios `widgets pais`.
+    
+    - Widget `Positioned` na própria `HomePage` também não se encontra com valores responsivos. O posicionamento dos Widgets sendo mantido com valores fixos não garante que será mantido em telas de tamanhos diferentes.
+        - A solução é semelhante à aplicação de responsividade nas dimensões dos Widgets.
 
 - [ ] Customização
     - Cores dos Widgets não estão padronizadas e também não dão a possibilidade de uma fácil alteração por parâmetros.

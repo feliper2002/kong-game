@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:kong_fteam/app/core/commands/dir_movement.dart';
 import 'package:kong_fteam/app/core/commands/jump_buttom.dart';
 
@@ -20,7 +18,9 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends ModularState<HomePage, HomeController> {
+class _HomePageState extends State<HomePage> {
+  final controller = HomeController();
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -115,12 +115,12 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
               ),
               //--------------------------Command-------------------------
               //--------------------------Characters-------------------------
-              Positioned(
+              const Positioned(
                 top: 278,
                 left: 8,
                 child: Kong(),
               ),
-              Positioned(
+              const Positioned(
                 top: 222,
                 left: 150,
                 child: Princess(),
