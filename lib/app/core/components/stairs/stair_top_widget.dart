@@ -4,10 +4,16 @@ import '../../constants/colors.dart';
 
 class StairTopWidget extends StatelessWidget {
   final Size size;
+  final Color color;
+  final Color lightColor;
+  final Color darkColor;
 
   const StairTopWidget({
     Key? key,
     this.size = const Size(26, 12),
+    this.color = AppColors.blue,
+    this.lightColor = AppColors.lightBlue,
+    this.darkColor = AppColors.darkBlue,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -22,12 +28,12 @@ class StairTopWidget extends StatelessWidget {
             Container(
               height: constraints.maxHeight * 1,
               width: constraints.maxWidth * .11,
-              color: AppColors.blue,
+              color: color,
               alignment: Alignment.topRight,
               child: Container(
                 height: constraints.maxHeight * .1,
                 width: constraints.maxHeight * .1,
-                color: AppColors.lightBlue,
+                color: lightColor,
               ),
             ),
             Column(
@@ -39,12 +45,12 @@ class StairTopWidget extends StatelessWidget {
                     Container(
                       height: constraints.maxHeight * .256,
                       width: constraints.maxWidth * .058,
-                      color: AppColors.darkBlue,
+                      color: darkColor,
                     ),
                     Container(
                       height: constraints.maxHeight * .256,
                       width: constraints.maxWidth * .058,
-                      color: AppColors.blue,
+                      color: color,
                     ),
                     //handrail center middle
                     Column(
@@ -52,12 +58,12 @@ class StairTopWidget extends StatelessWidget {
                         Container(
                           height: constraints.maxHeight * .128,
                           width: constraints.maxWidth * .544,
-                          color: AppColors.lightBlue,
+                          color: lightColor,
                         ),
                         Container(
                           height: constraints.maxHeight * .128,
                           width: constraints.maxWidth * .544,
-                          color: AppColors.blue,
+                          color: color,
                         ),
                       ],
                     ),
@@ -65,12 +71,12 @@ class StairTopWidget extends StatelessWidget {
                     Container(
                       height: constraints.maxHeight * .256,
                       width: constraints.maxWidth * .058,
-                      color: AppColors.blue,
+                      color: color,
                     ),
                     Container(
                       height: constraints.maxHeight * .256,
                       width: constraints.maxWidth * .058,
-                      color: AppColors.darkBlue,
+                      color: darkColor,
                     ),
                   ],
                 ),
@@ -80,12 +86,12 @@ class StairTopWidget extends StatelessWidget {
             Container(
               height: constraints.maxHeight * 1,
               width: constraints.maxWidth * .11,
-              color: AppColors.blue,
+              color: color,
               alignment: Alignment.topLeft,
               child: Container(
                 height: constraints.maxHeight * .1,
                 width: constraints.maxHeight * .1,
-                color: AppColors.lightBlue,
+                color: lightColor,
               ),
             ),
           ],

@@ -24,6 +24,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    print("Height: ${size.height}\nWidth: ${size.width}");
     return Scaffold(
       backgroundColor: Colors.white,
       body: Container(
@@ -36,23 +37,23 @@ class _HomePageState extends State<HomePage> {
             alignment: Alignment.bottomLeft,
             children: [
               //--------------------------Lattices---------------------------
-              const Positioned(
-                left: 76,
-                bottom: 499,
-                child: LatticeMounted(numberOfPieces: 4),
+              Positioned(
+                left: size.width * .2,
+                top: size.height * .332,
+                child: const LatticeMounted(numberOfPieces: 4),
               ),
-              const Positioned(
-                bottom: 421,
-                child: LatticeMounted(numberOfPieces: 9),
+              Positioned(
+                top: size.height * .43,
+                child: const LatticeMounted(numberOfPieces: 9),
               ),
-              const Positioned(
+              Positioned(
                 right: 0,
-                bottom: 253,
-                child: LatticeMounted(numberOfPieces: 6),
+                top: size.height * .643,
+                child: const LatticeMounted(numberOfPieces: 6),
               ),
-              const Positioned(
-                bottom: 85,
-                child: LatticeMounted(numberOfPieces: 9),
+              Positioned(
+                bottom: size.height * .111,
+                child: const LatticeMounted(numberOfPieces: 9),
               ),
               //--------------------------Stairs-----------------------------
               const Positioned(
@@ -78,8 +79,8 @@ class _HomePageState extends State<HomePage> {
               //--------------------------Characters-------------------------
               //--------------------------Command-------------------------
               Positioned(
-                bottom: 10,
-                left: 10,
+                bottom: size.height * .0128,
+                left: size.width * .0255,
                 child: JumpButton(
                   onTap: () {
                     controller.jump();
@@ -88,8 +89,8 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Positioned(
-                bottom: 10,
-                right: 10,
+                bottom: size.height * .0128,
+                right: size.width * .0255,
                 child: DirectionalMoviment(
                   onTopPress: () {
                     setState(() {

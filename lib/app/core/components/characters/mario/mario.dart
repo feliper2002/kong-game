@@ -4,9 +4,11 @@ enum MarioPos { up, down, left, left1, left2, right, right1, right2 }
 
 class Mario extends StatelessWidget {
   final MarioPos pos;
+  final double height;
   const Mario({
     Key? key,
     this.pos = MarioPos.right,
+    this.height = 23,
   }) : super(key: key);
 
   @override
@@ -36,6 +38,6 @@ class Mario extends StatelessWidget {
         break;
     }
 
-    return Image.asset(asset, height: 23);
+    return Image.asset(asset, height: height);
   }
 }

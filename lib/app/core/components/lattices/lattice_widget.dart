@@ -4,10 +4,16 @@ import '../../constants/colors.dart';
 
 class LatticeWidget extends StatelessWidget {
   final Size size;
+  final Color color;
+  final Color lightColor;
+  final Color darkColor;
 
   const LatticeWidget({
     Key? key,
     this.size = const Size(36, 24),
+    this.color = AppColors.pink,
+    this.lightColor = AppColors.lightPink,
+    this.darkColor = AppColors.darkPink,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -20,16 +26,16 @@ class LatticeWidget extends StatelessWidget {
             Container(
               width: constraints.maxWidth * 1,
               height: constraints.maxHeight * .06,
-              color: AppColors.lightPink,
+              color: lightColor,
             ),
             Container(
                 width: constraints.maxWidth * 1,
                 height: constraints.maxHeight * .06,
-                color: AppColors.pink),
+                color: color),
             Container(
               width: constraints.maxWidth * 1,
               height: constraints.maxHeight * .06,
-              color: AppColors.darkPink,
+              color: darkColor,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -37,12 +43,12 @@ class LatticeWidget extends StatelessWidget {
                 Container(
                   width: constraints.maxWidth * .12,
                   height: constraints.maxHeight * .06,
-                  color: AppColors.darkPink,
+                  color: darkColor,
                 ),
                 Container(
                   width: constraints.maxWidth * .12,
                   height: constraints.maxHeight * .06,
-                  color: AppColors.darkPink,
+                  color: darkColor,
                 ),
               ],
             ),
@@ -52,12 +58,12 @@ class LatticeWidget extends StatelessWidget {
                 Container(
                   width: constraints.maxWidth * .17,
                   height: constraints.maxHeight * .06,
-                  color: AppColors.darkPink,
+                  color: darkColor,
                 ),
                 Container(
                   width: constraints.maxWidth * .17,
                   height: constraints.maxHeight * .06,
-                  color: AppColors.darkPink,
+                  color: darkColor,
                 ),
               ],
             ),
@@ -70,12 +76,12 @@ class LatticeWidget extends StatelessWidget {
                   Container(
                     width: constraints.maxWidth * .19,
                     height: constraints.maxHeight * .06,
-                    color: AppColors.darkPink,
+                    color: darkColor,
                   ),
                   Container(
                     width: constraints.maxWidth * .19,
                     height: constraints.maxHeight * .06,
-                    color: AppColors.darkPink,
+                    color: darkColor,
                   ),
                 ],
               ),
@@ -89,12 +95,12 @@ class LatticeWidget extends StatelessWidget {
                   Container(
                     width: constraints.maxWidth * .19,
                     height: constraints.maxHeight * .06,
-                    color: AppColors.darkPink,
+                    color: darkColor,
                   ),
                   Container(
                     width: constraints.maxWidth * .19,
                     height: constraints.maxHeight * .06,
-                    color: AppColors.darkPink,
+                    color: darkColor,
                   ),
                 ],
               ),
@@ -110,12 +116,12 @@ class LatticeWidget extends StatelessWidget {
                       Container(
                         width: constraints.maxWidth * .05,
                         height: constraints.maxHeight * .06,
-                        color: AppColors.darkPink,
+                        color: darkColor,
                       ),
                       Container(
                         width: constraints.maxWidth * .14,
                         height: constraints.maxHeight * .06,
-                        color: AppColors.pink,
+                        color: color,
                       ),
                     ],
                   ),
@@ -124,12 +130,12 @@ class LatticeWidget extends StatelessWidget {
                       Container(
                         width: constraints.maxWidth * .14,
                         height: constraints.maxHeight * .06,
-                        color: AppColors.pink,
+                        color: color,
                       ),
                       Container(
                         width: constraints.maxWidth * .05,
                         height: constraints.maxHeight * .06,
-                        color: AppColors.darkPink,
+                        color: darkColor,
                       ),
                     ],
                   ),
@@ -147,12 +153,12 @@ class LatticeWidget extends StatelessWidget {
                       Container(
                         width: constraints.maxWidth * .05,
                         height: constraints.maxHeight * .06,
-                        color: AppColors.darkPink,
+                        color: darkColor,
                       ),
                       Container(
                         width: constraints.maxWidth * .14,
                         height: constraints.maxHeight * .06,
-                        color: AppColors.pink,
+                        color: color,
                       ),
                     ],
                   ),
@@ -161,12 +167,12 @@ class LatticeWidget extends StatelessWidget {
                       Container(
                         width: constraints.maxWidth * .14,
                         height: constraints.maxHeight * .06,
-                        color: AppColors.pink,
+                        color: color,
                       ),
                       Container(
                         width: constraints.maxWidth * .05,
                         height: constraints.maxHeight * .06,
-                        color: AppColors.darkPink,
+                        color: darkColor,
                       ),
                     ],
                   ),
@@ -184,12 +190,12 @@ class LatticeWidget extends StatelessWidget {
                       Container(
                         width: constraints.maxWidth * .05,
                         height: constraints.maxHeight * .06,
-                        color: AppColors.darkPink,
+                        color: darkColor,
                       ),
                       Container(
                         width: constraints.maxWidth * .14,
                         height: constraints.maxHeight * .06,
-                        color: AppColors.pink,
+                        color: color,
                       ),
                     ],
                   ),
@@ -198,12 +204,12 @@ class LatticeWidget extends StatelessWidget {
                       Container(
                         width: constraints.maxWidth * .14,
                         height: constraints.maxHeight * .06,
-                        color: AppColors.pink,
+                        color: color,
                       ),
                       Container(
                         width: constraints.maxWidth * .05,
                         height: constraints.maxHeight * .06,
-                        color: AppColors.darkPink,
+                        color: darkColor,
                       ),
                     ],
                   ),
@@ -221,12 +227,12 @@ class LatticeWidget extends StatelessWidget {
                       Container(
                         width: constraints.maxWidth * .05,
                         height: constraints.maxHeight * .06,
-                        color: AppColors.darkPink,
+                        color: darkColor,
                       ),
                       Container(
                         width: constraints.maxWidth * .14,
                         height: constraints.maxHeight * .06,
-                        color: AppColors.pink,
+                        color: color,
                       ),
                     ],
                   ),
@@ -235,12 +241,12 @@ class LatticeWidget extends StatelessWidget {
                       Container(
                         width: constraints.maxWidth * .14,
                         height: constraints.maxHeight * .06,
-                        color: AppColors.pink,
+                        color: color,
                       ),
                       Container(
                         width: constraints.maxWidth * .05,
                         height: constraints.maxHeight * .06,
-                        color: AppColors.darkPink,
+                        color: darkColor,
                       ),
                     ],
                   ),
@@ -252,39 +258,39 @@ class LatticeWidget extends StatelessWidget {
                 Container(
                   width: constraints.maxWidth * .46,
                   height: constraints.maxHeight * .06,
-                  color: AppColors.pink,
+                  color: color,
                 ),
                 Expanded(
                     child: Container(
                   height: constraints.maxHeight * .06,
-                  color: AppColors.darkPink,
+                  color: darkColor,
                 )),
                 Container(
                   width: constraints.maxWidth * .46,
                   height: constraints.maxHeight * .06,
-                  color: AppColors.pink,
+                  color: color,
                 ),
               ],
             ),
             Container(
               width: constraints.maxWidth * 1,
               height: constraints.maxHeight * .06,
-              color: AppColors.darkPink,
+              color: darkColor,
             ),
             Container(
               width: constraints.maxWidth * 1,
               height: constraints.maxHeight * .06,
-              color: AppColors.lightPink,
+              color: lightColor,
             ),
             Container(
               width: constraints.maxWidth * 1,
               height: constraints.maxHeight * .06,
-              color: AppColors.pink,
+              color: color,
             ),
             Container(
               width: constraints.maxWidth * 1,
               height: constraints.maxHeight * .06,
-              color: AppColors.darkPink,
+              color: darkColor,
             ),
           ],
         );

@@ -3,9 +3,17 @@ import '../../constants/colors.dart';
 
 class StairMidWidget extends StatelessWidget {
   final Size size;
+  final Color color;
+  final Color lightColor;
+  final Color darkColor;
 
-  const StairMidWidget({Key? key, this.size = const Size(26, 9)})
-      : super(key: key);
+  const StairMidWidget({
+    Key? key,
+    this.size = const Size(26, 9),
+    this.color = AppColors.blue,
+    this.lightColor = AppColors.lightBlue,
+    this.darkColor = AppColors.darkBlue,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -19,7 +27,7 @@ class StairMidWidget extends StatelessWidget {
             Container(
               height: constraints.maxHeight * 1,
               width: constraints.maxWidth * .11,
-              color: AppColors.blue,
+              color: color,
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -30,12 +38,12 @@ class StairMidWidget extends StatelessWidget {
                     Container(
                       height: constraints.maxHeight * .34,
                       width: constraints.maxWidth * .058,
-                      color: AppColors.darkBlue,
+                      color: darkColor,
                     ),
                     Container(
                       height: constraints.maxHeight * .34,
                       width: constraints.maxWidth * .058,
-                      color: AppColors.blue,
+                      color: color,
                     ),
                     //handrail center middle
                     Column(
@@ -43,12 +51,12 @@ class StairMidWidget extends StatelessWidget {
                         Container(
                           height: constraints.maxHeight * .17,
                           width: constraints.maxWidth * .544,
-                          color: AppColors.lightBlue,
+                          color: lightColor,
                         ),
                         Container(
                           height: constraints.maxHeight * .17,
                           width: constraints.maxWidth * .54,
-                          color: AppColors.blue,
+                          color: color,
                         ),
                       ],
                     ),
@@ -56,12 +64,12 @@ class StairMidWidget extends StatelessWidget {
                     Container(
                       height: constraints.maxHeight * .34,
                       width: constraints.maxWidth * .058,
-                      color: AppColors.blue,
+                      color: color,
                     ),
                     Container(
                       height: constraints.maxHeight * .34,
                       width: constraints.maxWidth * .058,
-                      color: AppColors.darkBlue,
+                      color: darkColor,
                     ),
                   ],
                 ),
@@ -71,7 +79,7 @@ class StairMidWidget extends StatelessWidget {
             Container(
               height: constraints.maxHeight * 1,
               width: constraints.maxWidth * .11,
-              color: AppColors.blue,
+              color: color,
             ),
           ],
         );
