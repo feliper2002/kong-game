@@ -1,6 +1,20 @@
 import 'package:flutter/material.dart';
 
-enum MarioPos { up, down, left, left1, left2, right, right1, right2 }
+enum MarioPos {
+  //// [Left movement]
+  left,
+  left1,
+  left2,
+  //// [Right movement]
+  right,
+  right1,
+  right2,
+  //// [Stairs movement]
+  stairs,
+  stairsLeft,
+  stairsRight,
+  stairsTop,
+}
 
 class Mario extends StatelessWidget {
   final MarioPos pos;
@@ -32,6 +46,18 @@ class Mario extends StatelessWidget {
         break;
       case MarioPos.right2:
         asset = 'assets/sprites/walk/marioRight2.png';
+        break;
+      case MarioPos.stairs:
+        asset = 'assets/sprites/walk/marioStairs.png';
+        break;
+      case MarioPos.stairsLeft:
+        asset = 'assets/sprites/walk/marioStairsLeft.png';
+        break;
+      case MarioPos.stairsRight:
+        asset = 'assets/sprites/walk/marioStairsRight.png';
+        break;
+      case MarioPos.stairsTop:
+        asset = 'assets/sprites/walk/marioStairsTopstairsTop.png';
         break;
       default:
         asset = 'assets/sprites/walk/marioRight.png';
