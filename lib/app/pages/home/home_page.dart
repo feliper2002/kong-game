@@ -56,25 +56,25 @@ class _HomePageState extends State<HomePage> {
                 child: const LatticeMounted(numberOfPieces: 9),
               ),
               //--------------------------Stairs-----------------------------
-              const Positioned(
-                left: 50,
-                bottom: 445,
-                child: StairMounted(numberOfPieces: 16),
+              Positioned(
+                left: size.width * .1276,
+                bottom: size.height * .569,
+                child: const StairMounted(numberOfPieces: 16),
               ),
-              const Positioned(
-                left: 176,
-                bottom: 445,
-                child: StairMounted(numberOfPieces: 6),
+              Positioned(
+                left: size.width * .449,
+                bottom: size.height * .569,
+                child: const StairMounted(numberOfPieces: 6),
               ),
-              const Positioned(
-                right: 94,
-                bottom: 277,
-                child: StairMounted(numberOfPieces: 16),
+              Positioned(
+                left: size.width * .65,
+                bottom: size.height * .357,
+                child: const StairMounted(numberOfPieces: 16),
               ),
-              const Positioned(
-                left: 177,
-                bottom: 109,
-                child: StairMounted(numberOfPieces: 16),
+              Positioned(
+                left: size.width * .452,
+                bottom: size.height * .14,
+                child: const StairMounted(numberOfPieces: 16),
               ),
               //--------------------------Characters-------------------------
               //--------------------------Command-------------------------
