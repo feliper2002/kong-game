@@ -81,6 +81,7 @@ class _HomePageState extends State<HomePage> {
                 bottom: size.height * .0128,
                 left: size.width * .0255,
                 child: JumpButton(
+                  size: size.height * .084,
                   onTap: () {
                     controller.jump();
                     setState(() {});
@@ -91,6 +92,7 @@ class _HomePageState extends State<HomePage> {
                 bottom: size.height * .0128,
                 right: size.width * .0255,
                 child: DirectionalMoviment(
+                  size: size.height * .084,
                   onTopPress: () {
                     setState(() {
                       controller.moveUp();
