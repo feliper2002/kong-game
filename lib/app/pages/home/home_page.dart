@@ -116,15 +116,15 @@ class _HomePageState extends State<HomePage> {
               ),
               //--------------------------Command-------------------------
               //--------------------------Characters-------------------------
-              const Positioned(
-                top: 278,
-                left: 8,
-                child: Kong(),
+              Positioned(
+                top: size.height * .3546,
+                left: size.width * .027,
+                child: const Kong(),
               ),
-              const Positioned(
-                top: 222,
-                left: 150,
-                child: Princess(),
+              Positioned(
+                top: size.height * .285,
+                left: size.width * .356,
+                child: const Princess(),
               ),
               AnimatedContainer(
                 alignment: Alignment(controller.x, controller.y),
