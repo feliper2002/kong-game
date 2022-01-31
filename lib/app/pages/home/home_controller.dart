@@ -67,11 +67,13 @@ class HomeController {
 
   moveUp() {
     y -= singleWALK;
+    marioPos = MarioPos.stairs;
   }
 
   moveDown() {
     if (y <= .7) {
       y += singleWALK;
+      marioPos = MarioPos.stairs;
     }
   }
 

@@ -48,16 +48,16 @@ class Mario extends StatelessWidget {
         asset = 'assets/sprites/walk/marioRight2.png';
         break;
       case MarioPos.stairs:
-        asset = 'assets/sprites/walk/marioStairs.png';
+        asset = 'assets/sprites/stairs/marioStairs.png';
         break;
       case MarioPos.stairsLeft:
-        asset = 'assets/sprites/walk/marioStairsLeft.png';
+        asset = 'assets/sprites/stairs/marioStairsLeft.png';
         break;
       case MarioPos.stairsRight:
-        asset = 'assets/sprites/walk/marioStairsRight.png';
+        asset = 'assets/sprites/stairs/marioStairsRight.png';
         break;
       case MarioPos.stairsTop:
-        asset = 'assets/sprites/walk/marioStairsTopstairsTop.png';
+        asset = 'assets/sprites/stairs/marioStairsTopstairsTop.png';
         break;
       default:
         asset = 'assets/sprites/walk/marioRight.png';
