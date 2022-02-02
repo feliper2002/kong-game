@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:kong_fteam/app/core/commands/dir_movement.dart';
 import 'package:kong_fteam/app/core/commands/jump_buttom.dart';
 
@@ -20,7 +18,9 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends ModularState<HomePage, HomeController> {
+class _HomePageState extends State<HomePage> {
+  final controller = HomeController();
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -36,51 +36,52 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
             alignment: Alignment.bottomLeft,
             children: [
               //--------------------------Lattices---------------------------
-              const Positioned(
-                left: 76,
-                bottom: 499,
-                child: LatticeMounted(numberOfPieces: 4),
+              Positioned(
+                left: size.width * .2,
+                top: size.height * .332,
+                child: const LatticeMounted(numberOfPieces: 4),
               ),
-              const Positioned(
-                bottom: 421,
-                child: LatticeMounted(numberOfPieces: 9),
+              Positioned(
+                top: size.height * .43,
+                child: const LatticeMounted(numberOfPieces: 9),
               ),
-              const Positioned(
+              Positioned(
                 right: 0,
-                bottom: 253,
-                child: LatticeMounted(numberOfPieces: 6),
+                top: size.height * .643,
+                child: const LatticeMounted(numberOfPieces: 6),
               ),
-              const Positioned(
-                bottom: 85,
-                child: LatticeMounted(numberOfPieces: 9),
+              Positioned(
+                bottom: size.height * .111,
+                child: const LatticeMounted(numberOfPieces: 9),
               ),
               //--------------------------Stairs-----------------------------
-              const Positioned(
-                left: 50,
-                bottom: 445,
-                child: StairMounted(numberOfPieces: 16),
+              Positioned(
+                left: size.width * .1276,
+                bottom: size.height * .569,
+                child: const StairMounted(numberOfPieces: 16),
               ),
-              const Positioned(
-                left: 176,
-                bottom: 445,
-                child: StairMounted(numberOfPieces: 6),
+              Positioned(
+                left: size.width * .449,
+                bottom: size.height * .569,
+                child: const StairMounted(numberOfPieces: 6),
               ),
-              const Positioned(
-                right: 94,
-                bottom: 277,
-                child: StairMounted(numberOfPieces: 16),
+              Positioned(
+                left: size.width * .65,
+                bottom: size.height * .357,
+                child: const StairMounted(numberOfPieces: 16),
               ),
-              const Positioned(
-                left: 177,
-                bottom: 109,
-                child: StairMounted(numberOfPieces: 16),
+              Positioned(
+                left: size.width * .452,
+                bottom: size.height * .14,
+                child: const StairMounted(numberOfPieces: 16),
               ),
               //--------------------------Characters-------------------------
               //--------------------------Command-------------------------
               Positioned(
-                bottom: 10,
-                left: 10,
+                bottom: size.height * .0128,
+                left: size.width * .0255,
                 child: JumpButton(
+                  size: size.height * .084,
                   onTap: () {
                     controller.jump();
                     setState(() {});
@@ -88,9 +89,10 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                 ),
               ),
               Positioned(
-                bottom: 10,
-                right: 10,
+                bottom: size.height * .0128,
+                right: size.width * .0255,
                 child: DirectionalMoviment(
+                  size: size.height * .084,
                   onTopPress: () {
                     setState(() {
                       controller.moveUp();
@@ -116,14 +118,14 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
               //--------------------------Command-------------------------
               //--------------------------Characters-------------------------
               Positioned(
-                top: 278,
-                left: 8,
-                child: Kong(),
+                top: size.height * .3546,
+                left: size.width * .027,
+                child: const Kong(),
               ),
               Positioned(
-                top: 222,
-                left: 150,
-                child: Princess(),
+                top: size.height * .285,
+                left: size.width * .356,
+                child: const Princess(),
               ),
               AnimatedContainer(
                 alignment: Alignment(controller.x, controller.y),
