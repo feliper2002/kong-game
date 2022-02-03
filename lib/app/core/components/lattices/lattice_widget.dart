@@ -3,23 +3,25 @@ import 'package:flutter/material.dart';
 import '../../constants/colors.dart';
 
 class LatticeWidget extends StatelessWidget {
-  final Size size;
+  final double height;
+  final double width;
   final Color color;
   final Color lightColor;
   final Color darkColor;
 
   const LatticeWidget({
     Key? key,
-    this.size = const Size(36, 24),
     this.color = AppColors.pink,
     this.lightColor = AppColors.lightPink,
     this.darkColor = AppColors.darkPink,
+    this.height = 24,
+    this.width = 36,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: size.height,
-      width: size.width,
+      height: height * .0315,
+      width: width * .09,
       child: LayoutBuilder(builder: (context, constraints) {
         return Column(
           children: [

@@ -18,14 +18,17 @@ class StairMounted extends StatelessWidget {
     return Column(
       children: [
         StairTopWidget(
-          size: size,
+          height: size.height * .01,
+          width: size.width * .08,
         ),
         for (var i = 0; i < numberOfPieces; i++)
           StairMidWidget(
-            size: Size(size.width, size.height * .75),
+            height: size.height * .0123,
+            width: size.width * .08,
           ),
         StairBotWidget(
-          size: size,
+          height: size.height * .01,
+          width: size.width * .08,
         ),
       ],
     );

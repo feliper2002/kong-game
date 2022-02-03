@@ -2,23 +2,25 @@ import 'package:flutter/material.dart';
 import '../../constants/colors.dart';
 
 class StairMidWidget extends StatelessWidget {
-  final Size size;
+  final double height;
+  final double width;
   final Color color;
   final Color lightColor;
   final Color darkColor;
 
   const StairMidWidget({
     Key? key,
-    this.size = const Size(26, 9),
     this.color = AppColors.blue,
     this.lightColor = AppColors.lightBlue,
     this.darkColor = AppColors.darkBlue,
+    this.height = 9,
+    this.width = 26,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: size.height,
-      width: size.width,
+      height: height,
+      width: width,
       child: LayoutBuilder(builder: (context, constraints) {
         return Row(
           crossAxisAlignment: CrossAxisAlignment.center,

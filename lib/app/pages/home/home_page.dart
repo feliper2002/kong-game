@@ -39,41 +39,41 @@ class _HomePageState extends State<HomePage> {
               Positioned(
                 left: size.width * .2,
                 top: size.height * .332,
-                child: const LatticeMounted(numberOfPieces: 4),
+                child: LatticeMounted(numberOfPieces: 4, size: size),
               ),
               Positioned(
                 top: size.height * .43,
-                child: const LatticeMounted(numberOfPieces: 9),
+                child: LatticeMounted(numberOfPieces: 9, size: size),
               ),
               Positioned(
                 right: 0,
                 top: size.height * .643,
-                child: const LatticeMounted(numberOfPieces: 6),
+                child: LatticeMounted(numberOfPieces: 6, size: size),
               ),
               Positioned(
                 bottom: size.height * .111,
-                child: const LatticeMounted(numberOfPieces: 9),
+                child: LatticeMounted(numberOfPieces: 9, size: size),
               ),
               //--------------------------Stairs-----------------------------
               Positioned(
                 left: size.width * .1276,
                 bottom: size.height * .569,
-                child: const StairMounted(numberOfPieces: 16),
+                child: StairMounted(numberOfPieces: 16, size: size),
               ),
               Positioned(
                 left: size.width * .449,
                 bottom: size.height * .569,
-                child: const StairMounted(numberOfPieces: 6),
+                child: StairMounted(numberOfPieces: 6, size: size),
               ),
               Positioned(
                 left: size.width * .65,
                 bottom: size.height * .357,
-                child: const StairMounted(numberOfPieces: 16),
+                child: StairMounted(numberOfPieces: 16, size: size),
               ),
               Positioned(
                 left: size.width * .452,
                 bottom: size.height * .14,
-                child: const StairMounted(numberOfPieces: 16),
+                child: StairMounted(numberOfPieces: 16, size: size),
               ),
               //--------------------------Characters-------------------------
               //--------------------------Command-------------------------
