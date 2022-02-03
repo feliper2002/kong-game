@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
               //--------------------------Lattices---------------------------
               Positioned(
                 left: size.width * .2,
-                top: size.height * .332,
+                top: size.height * .336,
                 child: LatticeMounted(numberOfPieces: 4, size: size),
               ),
               Positioned(
@@ -123,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                 child: const Kong(),
               ),
               Positioned(
-                top: size.height * .285,
+                top: size.height * .288,
                 left: size.width * .356,
                 child: const Princess(),
               ),
